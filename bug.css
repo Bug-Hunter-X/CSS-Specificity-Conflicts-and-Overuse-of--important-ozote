@@ -1,0 +1,19 @@
+The following CSS code snippet demonstrates a common issue where specificity conflicts can lead to unexpected styling behavior.  The "important" tag is used excessively, overriding intended styles and making maintenance difficult.
+
+```css
+.class1 { 
+  color: blue !important; 
+}
+
+#id1 { 
+  color: red !important; 
+}
+
+.class2 { 
+  color: green !important; 
+}
+
+.class1 #id1 {
+  color: yellow; /* This will likely be overridden */
+}
+```
